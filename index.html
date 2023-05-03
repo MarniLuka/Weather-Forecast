@@ -16,14 +16,41 @@
     <link rel="stylesheet" href="./assets/style.css" />
 </head>
 <body>
-    <nav class="navbar fixed-top">
-        <div class="container-fluid">
-          <a class="navbar-brand">Weather Forecast</a>
+    <header>
+        <h1>Weather Forecast</h1>
+    </header>
+    <main class="row">
+        <div class="container">
+            <div class="row">
+                <!-- Searchbar -->
+                <div class="container col-md-3" id="searchBar">
+                    <h3>Search for a City:</h3>
+                    <input class="form-control me-2" id="searchInput" type="search" placeholder="City Name" aria-label="Search">
+                    <button class="btn" id="searchBtn" type="submit">Search</button>
+                    
+                    <div class="col-md-3" id="previousSearches">
+                        <!-- previously searched cities -->
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <!-- Weather Dashboard: displays city, date, temp, wind, humidity -->
+                    <div id="dashboardDisplay">
+                        
+                    </div>
+
+                    <!-- Cards for 5-day forecast: displays date, temp, wind, humidity-->
+                    <div class="row" id="cardDisplay">
+                        <h4>5-Day Forecast:</h4>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
 
 
 
+
+    </main>
 
     <!-- Bootstrap -->
     <script 
