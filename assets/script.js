@@ -35,5 +35,17 @@ function weatherDisplay() {
         })
 }
 
+function fiveDayDisplay() {
+    fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey)
+        .then (function (response) {
+            return response.json();
+        })
+        .then (function (data) {
+            for (var i = 0; i < 5; i++) {
+                
+            }
+        })
+}
+
 
 searchBtn.addEventListener('click', weatherDisplay);

@@ -1,4 +1,6 @@
-
+body {
+    background: rgba(189, 189, 189, 0.37);
+}
 
 header {
     background: linear-gradient(to right, #0099ff 0%, #003399 100%);
@@ -22,4 +24,12 @@ header h1 {
     background-color: #6ec5ff;
     color: white;
     margin: 10px 0;
+}
+
+#card1,
+#card2,
+#card3,
+#card4,
+#card5 {
+    background-color: #bbe4ff;
 }
