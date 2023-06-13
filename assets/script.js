@@ -24,7 +24,7 @@ function weatherDisplay() {
             return response.json();
         })
         .then (function (data) {
-            var date = dayjs().format('MM/DD/YYY');
+            var date = dayjs().format('MM/DD/yY');
             $('#cardCity').textContent = data.name;
             $('cardDate0').textContent = date;
             $('cardTemp0').textContent = data.main.temp;
@@ -41,11 +41,27 @@ function fiveDayDisplay() {
             return response.json();
         })
         .then (function (data) {
-            for (var i = 0; i < 5; i++) {
-                
-            }
+            $('cardTemp1').textContent = data.list[0].main.temp + "°F";
+            $('cardWind1').textContent = data.list[0].wind.speed + "MPH";
+            $('cardHumidity1').textContent = data.list[0].main.humidity + "%";
+            
+            $('cardTemp2').textContent = data.list[1].main.temp + "°F";
+            $('cardWind2').textContent = data.list[1].wind.speed + "MPH";
+            $('cardHumidity2').textContent = data.list[1].main.humidity + "%";
+
+            $('cardTemp3').textContent = data.list[2].main.temp + "°F";
+            $('cardWind3').textContent = data.list[2].wind.speed + "MPH";
+            $('cardHumidity3').textContent = data.list[2].main.humidity + "%";
+
+            $('cardTemp4').textContent = data.list[3].main.temp + "°F";
+            $('cardWind4').textContent = data.list[3].wind.speed + "MPH";
+            $('cardHumidity4').textContent = data.list[3].main.humidity + "%";
+
+            $('cardTemp5').textContent = data.list[4].main.temp + "°F";
+            $('cardWind5').textContent = data.list[4].wind.speed + "MPH";
+            $('cardHumidity5').textContent = data.list[4].main.humidity + "%";
         })
 }
 
 
-searchBtn.addEventListener('click', weatherDisplay);
+searchBtn.addEventListener('click', weatherDisplay);searchBtn.addEventListener('click', fiveDayDisplay);
